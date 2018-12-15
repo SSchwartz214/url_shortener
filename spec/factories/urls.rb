@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :url do
-    original { "https://www.google.com/" }
-    random_id { "abc" }
+    original { Faker::Internet.email }
+    random_id { Faker::Internet.slug }
   end
 end
