@@ -9,10 +9,6 @@ class Api::V1::UrlsController < ApplicationController
     url = Url.new(url_params)
 
     if url.save
-      letters = [('a'..'z'), ('A'..'Z')].map { |i| i.to_a }.flatten
-      url.random_id = (0...8).map { letters[rand(letters.length)] }.join
-      url.save
-
       render json: url
     else
       render json: {error: 'Unable to create url'}, status: 400 
