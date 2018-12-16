@@ -5,6 +5,18 @@ class Api::V1::UrlsController < ApplicationController
     render json: urls
   end
 
+  def show
+    url = Url.find(params[:id])
+
+    if url
+      if redirect_to url.original
+        url.increment!(:clicks) 
+      end
+    else
+      render 'index'
+    end
+  end
+
   def create
     url = Url.new(url_params)
 
@@ -23,5 +35,4 @@ class Api::V1::UrlsController < ApplicationController
   def url_params
     params.require(:url).permit(:original)
   end
-
 end
