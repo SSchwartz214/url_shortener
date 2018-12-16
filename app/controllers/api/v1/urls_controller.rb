@@ -10,8 +10,7 @@ class Api::V1::UrlsController < ApplicationController
 
     if url
       if redirect_to url.original
-        url.clicks += 1
-        url.save
+        url.increment!(:clicks) 
       end
     else
       render 'index'
