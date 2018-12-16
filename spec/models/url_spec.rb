@@ -10,10 +10,4 @@ RSpec.describe Url, type: :model do
       expect(url.random_id).to be_a(String)
     end
   end 
-
-  it "can scrape for title" do
-    url = create(:url, original: 'https://www.google.com/')
-
-    expect(url.scrape_title).to eq('Google')
-  end
 end

@@ -9,6 +9,9 @@ class Api::V1::UrlsController < ApplicationController
     url = Url.new(url_params)
 
     if url.save
+      scraped_title = Scrape.perform(url.original)
+      url.update_attributes(title: scraped_title)
+      
       render json: url
     else
       render json: {error: 'Unable to create url'}, status: 400 

@@ -24,4 +24,14 @@ describe 'Url API' do
     expect(response).to be_successful
     expect(Url.all.count).to eq(100)
   end
+
+  it 'can scrape url for title' do
+    url_params = { original: 'https://www.google.com/'}
+
+    post '/api/v1/urls', params: {url: url_params}
+    url = Url.last
+
+    expect(response).to be_successful
+    expect(url.title).to eq('Google')
+  end
 end
