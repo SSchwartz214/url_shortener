@@ -9,6 +9,5 @@ RSpec.describe Url, type: :model do
       expect(url.random_id).to_not eq(nil)
       expect(url.random_id).to be_a(String)
     end
-
   end 
 end
