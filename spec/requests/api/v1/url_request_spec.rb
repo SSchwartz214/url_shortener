@@ -17,6 +17,15 @@ describe 'Url API' do
     expect(url.random_id.length).to eq(8)
   end
 
+  it 'can get an original url by its id' do
+    create(:url, original: 'https://www.google.com/')
+    id = Url.last.id
+
+    get "/api/v1/urls/#{id}"
+
+    expect(response.headers["Content-Type"]).to eq "text/html; charset=utf-8"
+  end
+
     it 'can send a list of the top 100 urls' do
 # TODO Return 100 most frequently accessed urls
     get '/api/v1/urls'

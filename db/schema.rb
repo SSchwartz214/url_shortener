@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2018_12_16_194102) do
     t.string "random_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "clicks"
+    t.integer "clicks", default: 0
     t.string "title"
   end
 
