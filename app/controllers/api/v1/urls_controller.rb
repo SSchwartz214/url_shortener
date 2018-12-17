@@ -9,24 +9,20 @@ class Api::V1::UrlsController < ApplicationController
     url = Url.find(params[:id])
 
     if url
-      if redirect_to url.original
-        url.increment!(:clicks) 
-      end
+      url.increment!(:clicks) 
+      redirect_to url.original
     else
-      render 'index'
+      render json: {error: "Can't locate url"}, status: 400
     end
   end
 
   def create
     url = Url.new(url_params)
 
-    if url.save
-      scraped_title = Scrape.perform(url.original)
-      url.update_attributes(title: scraped_title)
-      
+    if url.save  
       render json: url
     else
-      render json: {error: 'Unable to create url'}, status: 400 
+      render json: {error: 'Unable to create url'}, status: 404 
     end
   end
 
