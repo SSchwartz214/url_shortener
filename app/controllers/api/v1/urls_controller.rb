@@ -1,8 +1,9 @@
 class Api::V1::UrlsController < ApplicationController
 
-  def index # TODO Return 100 most frequently accessed urls
-    urls = Url.all
-    render json: urls
+  def index
+    top_100_urls = Url.top_100
+
+    render json: top_100_urls
   end
 
   def show

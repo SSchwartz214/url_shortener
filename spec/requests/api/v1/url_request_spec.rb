@@ -36,11 +36,11 @@ describe 'Url API' do
     expect(url.title).to eq('The official site of the NBA | NBA.com')
   end
 
-  xit 'can send a list of the top 100 urls' do
-  # TODO Return 100 most frequently accessed urls
+  it 'can send a list of the top 100 urls' do
+    create_list(:url, 100, clicks: 1)
     get '/api/v1/urls'
 
     expect(response).to be_successful
-    expect(Url.all.count).to eq(100)
+    expect(Url.top_100.count).to eq(100)
   end
 end
