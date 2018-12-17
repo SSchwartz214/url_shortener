@@ -10,7 +10,8 @@ class Api::V1::UrlsController < ApplicationController
     url = Url.find(params[:id])
 
     if url
-      url.increment!(:clicks) 
+      url.increment!(:clicks)
+      
       redirect_to url.original
     else
       render json: {error: "Can't locate url"}, status: 400
