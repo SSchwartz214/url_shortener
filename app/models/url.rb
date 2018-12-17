@@ -1,6 +1,6 @@
 class Url < ApplicationRecord
   validates_presence_of :original
-  after_create :generate_short, :fetch_title
+  after_create :generate_short, :scrape_title
   
   def generate_short
     self.short = self.id.to_s(36)
@@ -8,8 +8,8 @@ class Url < ApplicationRecord
     self.save
   end
 
-  def fetch_title
-    scraped_title = Scrape.perform(original)
+  def scrape_title
+    scraped_title = Scrape.perform(self.original)
     self.update_attributes(title: scraped_title)
   end
 end
