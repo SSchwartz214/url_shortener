@@ -6,8 +6,8 @@ RSpec.describe Url, type: :model do
       url = create(:url, original: 'https://www.google.com/')
 
       expect(url.original).to eq('https://www.google.com/')
-      expect(url.random_id).to_not eq(nil)
-      expect(url.random_id).to be_a(String)
+      expect(url.short).to_not eq(nil)
+      expect(url.short).to be_a(String)
     end
   end 
 end

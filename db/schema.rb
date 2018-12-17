@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2018_12_16_194102) do
 
   create_table "urls", force: :cascade do |t|
     t.string "original"
-    t.string "random_id"
+    t.string "short"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "clicks", default: 0

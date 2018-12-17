@@ -12,9 +12,8 @@ describe 'Url API' do
     url = Url.last
 
     expect(response).to be_successful
-    expect(url.random_id).to_not eq(nil)
-    expect(url.random_id).to be_a(String)
-    expect(url.random_id.length).to eq(8)
+    expect(url.short).to_not eq(nil)
+    expect(url.short).to be_a(String)
   end
 
   it 'can get an original url by its id' do
