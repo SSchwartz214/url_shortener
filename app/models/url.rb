@@ -8,7 +8,7 @@ class Url < ApplicationRecord
     self.save
   end
 
-  def fetch_title
+  def scrape_title
     scraped_title = Scrape.perform(original)
     self.update_attributes(title: scraped_title)
   end
