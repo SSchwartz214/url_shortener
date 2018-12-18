@@ -48,11 +48,11 @@ POST /api/v1/url
         example parameters:<br/>
             { "original": "https://www.google.com/" } <br/>
             
-        Return JSON:
-        {
-          "original": "https://www.google.com/",
-          "short": "m",
-          "title": null
+        Return JSON:<br/>
+        {<br/>
+          "original": "https://www.google.com/",<br/>
+          "short": "m",<br/>
+          "title": null<br/>
          }
 ```
 GET /api/v1/<shortened url>
