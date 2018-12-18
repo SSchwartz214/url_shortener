@@ -38,15 +38,13 @@ https://tranquil-anchorage-97299.herokuapp.com/
 ### Record Endpoints:
 
 #### Urls
-
+```
 POST /api/v1/url
 ```
    * Allows creating a new url with the parameters:<br/>
    example parameters:<br/>
    {"original": "https://www.google.com/"}<br/>
 ```
-```
-
 GET /api/v1/<shortened url>
 ```
   * Redirects to the original url
@@ -54,8 +52,7 @@ GET /api/v1/<shortened url>
 GET /api/v1/top
 ```
   * Returns the top 100 most frequented urls
-```
-```
+
 #### Questions or comments?
 
 Please contact me at:
