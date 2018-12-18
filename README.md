@@ -22,8 +22,11 @@ $ rake db:{create,migrate,seed}
 
 * To view locally:
 ```
+$ redis-server
+$ bundle exec sidekiq
 $ rails s
-visit 'localhost:3000' in your browser
+
+Then visit 'localhost:3000' in your browser
 ```
 * How to run the test suite
 ```
@@ -41,9 +44,9 @@ https://tranquil-anchorage-97299.herokuapp.com/
 ```
 POST /api/v1/url
 ```
-   * Allows creating a new url with the parameters:<br/>
-   example parameters:<br/>
-   {"original": "https://www.google.com/"}<br/>
+   * Allows creating a new url with parameters:<br/>
+        example parameters:<br/>
+            { "original": "https://www.google.com/" } <br/>
 ```
 GET /api/v1/<shortened url>
 ```
