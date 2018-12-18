@@ -55,7 +55,7 @@ POST /api/v1/url
           "title": null<br/>
          }
 ```
-GET /api/v1/<shortened url>
+GET /api/v1/<short>
 ```
   * Redirects to the original url
 ```
