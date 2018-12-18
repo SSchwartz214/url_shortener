@@ -35,7 +35,7 @@ $ rspec
 
 * To view production version, visit:
 ```
-[Url Shortener](https://tranquil-anchorage-97299.herokuapp.com/)
+[https://tranquil-anchorage-97299.herokuapp.com/]
 ```
 
 ### Record Endpoints:
