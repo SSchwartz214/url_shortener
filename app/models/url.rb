@@ -15,7 +15,6 @@ class Url < ApplicationRecord
   end
 
   def scrape_title
-    scraped_title = Scrape.perform(self.original)
-    self.update_attributes(title: scraped_title)
+    ScrapeWorker.perform_async(id)
   end
 end
