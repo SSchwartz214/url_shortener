@@ -47,6 +47,13 @@ POST /api/v1/url
    * Allows creating a new url with parameters:<br/>
         example parameters:<br/>
             { "original": "https://www.google.com/" } <br/>
+            
+        Return JSON:
+        {
+          "original": "https://www.google.com/",
+          "short": "m",
+          "title": null
+         }
 ```
 GET /api/v1/<shortened url>
 ```
