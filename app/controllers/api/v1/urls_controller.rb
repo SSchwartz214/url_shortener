@@ -7,7 +7,7 @@ class Api::V1::UrlsController < ApplicationController
   end
 
   def show
-    url = Url.find(params[:id])
+    url = Url.find_by(short: params[:short])
 
     if url
       url.increment!(:clicks)
