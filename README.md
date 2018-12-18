@@ -62,6 +62,24 @@ GET /api/v1/<shortened url>
 GET /api/v1/top
 ```
   * Returns the top 100 most frequented urls
+  
+  Return JSON:<br/>
+  [<br/>
+    {<br/>
+        "original": "https://www.mlb.com/",<br/>
+        "short": "i",<br/>
+        "title": "MLB.com | The Official Site of Major League Baseball"<br/>
+    },<br/>
+    {<br/>
+        "original": "https://www.google.com/",<br/>
+        "short": "j",<br/>
+        "title": "Google"<br/>
+    },<br/>
+    {<br/>
+        "original": "https://www.twitter.com/",<br/>
+        "short": "1",<br/>
+        "title": "Twitter. It's what's happening."<br/>
+    },
 
 #### Questions or comments?
 
