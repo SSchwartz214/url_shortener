@@ -34,9 +34,7 @@ $ rspec
 ```
 
 * To view production version, visit:
-```
 [https://tranquil-anchorage-97299.herokuapp.com/]
-```
 
 ### Record Endpoints:
 
