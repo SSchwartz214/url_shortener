@@ -26,16 +26,6 @@ describe 'Url API' do
     expect(response.headers["Content-Type"]).to eq "text/html; charset=utf-8"
   end
 
-  it 'can scrape url for title' do
-    url_params = { original: 'https://www.nba.com/'}
-    
-    post '/api/v1/urls', params: {url: url_params}
-    url = Url.last
-    
-    expect(response).to be_successful
-    expect(url.title).to eq('The official site of the NBA | NBA.com')
-  end
-
   it 'can send a list of the top 100 urls' do
     create_list(:url, 100, clicks: 1)
     get '/api/v1/urls'

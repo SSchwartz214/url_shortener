@@ -20,8 +20,8 @@ class Api::V1::UrlsController < ApplicationController
 
   def create
     url = Url.new(url_params)
-
-    if url.save  
+    
+    if url.save
       render json: url
     else
       render json: {error: 'Unable to create url'}, status: 404 
