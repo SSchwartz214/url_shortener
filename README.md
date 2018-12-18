@@ -4,6 +4,9 @@
 
 Url Shortner is the backend of an app that allows users to input a url and have it shortened to a custom url.  Users can also visit the original url by clicking on the shortened url as well as view the top 100 most viewed urls.
 
+### Algorithm 
+My method ‘generate_short’ takes the database id for a url and converts it into it’s Base 36 equivalent.  Since every url has a unique id no url will ever have the same Base 36 equivalent and as a result will never have the same shortened url.
+
 #### Rails version: 5.1.6
 
 ### Configuration
