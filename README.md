@@ -1,24 +1,63 @@
-# README
+### Url Shortener
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Description
 
-Things you may want to cover:
+Url Shortner is the backend of an app that allows users to input a url and have it shortened to a custom url.  Users can also visit the original url by clicking on the shortened url as well as view the top 100 most viewed urls.
 
-* Ruby version
+#### Rails version: 5.1.6
 
-* System dependencies
+### Configuration
 
-* Configuration
+* Clone the repository:
+```
+git clone https://github.com/SSchwartz214/url_shortener.git
+```
 
-* Database creation
+* Setup:
+```
+$ bundle install
+$ bundle update
+$ rake db:{create,migrate,seed}
+```
 
-* Database initialization
-
+* To view locally:
+```
+$ rails s
+visit 'localhost:3000' in your browser
+```
 * How to run the test suite
+```
+$ rspec
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+* To view production version, visit:
+```
+https://tranquil-anchorage-97299.herokuapp.com/
+```
 
-* Deployment instructions
+### Record Endpoints:
 
-* ...
+#### Urls
+
+POST /api/v1/url
+```
+   * Allows creating a new url with the parameters:<br/>
+   example parameters:<br/>
+   {"original": "https://www.google.com/"}<br/>
+```
+```
+
+GET /api/v1/<shortened url>
+```
+  * Redirects to the original url
+```
+GET /api/v1/top
+```
+  * Returns the top 100 most frequented urls
+```
+```
+#### Questions or comments?
+
+Please contact me at:
+
+* Seth: sschwartz214@gmail.com
