@@ -38,14 +38,13 @@ $ rspec
 
 * To view production version, visit:
 
-https://url-shortener--api.herokuapp.com/top
+https://url-shortener--api.herokuapp.com/api/v1/top
 
 ### Record Endpoints:
 
 #### Urls
-```
-POST /api/v1/url
-```
+
+** POST /api/v1/url
 ```
    * Allows creating a new url with parameters:<br/>
         example parameters:<br/>
@@ -58,18 +57,16 @@ POST /api/v1/url
           "title": null<br/>
          }
 ```
-```
-GET /api/v1/<short>
-```
+
+** GET /api/v1/<short>
   * Redirects to the original url
-```
-GET /api/v1/top
-```
+
+** GET /api/v1/top
   * Returns the top 100 most frequented urls
   
   Return JSON:<br/>
-  [<br/>
   ```
+  [<br/>
     {<br/>
         "original": "https://www.mlb.com/",<br/>
         "short": "i",<br/>
@@ -85,7 +82,7 @@ GET /api/v1/top
         "short": "1",<br/>
         "title": "Twitter. It's what's happening."<br/>
     },
-    ```
+```
 
 #### Questions or comments?
 
