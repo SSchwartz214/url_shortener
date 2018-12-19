@@ -71,7 +71,6 @@ https://url-shortener--api.herokuapp.com/api/v1/top
 
    * Returns the top 100 most frequented urls
 ```
-
       [
         {
             "original": "https://www.mlb.com/",
