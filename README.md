@@ -38,7 +38,7 @@ $ rspec
 
 * To view production version, visit:
 
-https://tranquil-anchorage-97299.herokuapp.com/
+https://tranquil-anchorage-97299.herokuapp.com/top
 
 ### Record Endpoints:
 
@@ -67,6 +67,7 @@ GET /api/v1/top
   
   Return JSON:<br/>
   [<br/>
+  ```
     {<br/>
         "original": "https://www.mlb.com/",<br/>
         "short": "i",<br/>
@@ -82,6 +83,7 @@ GET /api/v1/top
         "short": "1",<br/>
         "title": "Twitter. It's what's happening."<br/>
     },
+    ```
 
 #### Questions or comments?
 
