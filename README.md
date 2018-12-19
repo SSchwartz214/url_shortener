@@ -54,24 +54,23 @@ https://url-shortener--api.herokuapp.com/api/v1/top
 ```
 ```    
         Return JSON:
-        {
-          "original": "https://www.google.com/",
-          "short": "m",
-          "title": null
-         }
+        
+            {
+              "original": "https://www.google.com/",
+              "short": "m",
+              "title": null
+             }
 ```
 
 #### GET /api/v1/<short>
-```
-   Redirects to the original url
-```
+
+   * Redirects to the original url
+
 
 #### GET /api/v1/top
+
+   * Returns the top 100 most frequented urls
 ```
-   Returns the top 100 most frequented urls
-```
-```
-Return JSON:
 
       [
         {
