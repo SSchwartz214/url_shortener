@@ -73,22 +73,23 @@ https://url-shortener--api.herokuapp.com/api/v1/top
 ```
 Return JSON:
 
-  [
-    {
-        "original": "https://www.mlb.com/",
-        "short": "i",
-        "title": "MLB.com | The Official Site of Major League Baseball"
-    },
-    {
-        "original": "https://www.google.com/",
-        "short": "j",
-        "title": "Google"
-    },
-    {
-        "original": "https://www.twitter.com/",
-        "short": "1",
-        "title": "Twitter. It's what's happening."
-    },
+
+      [
+        {
+            "original": "https://www.mlb.com/",
+            "short": "i",
+            "title": "MLB.com | The Official Site of Major League Baseball"
+        },
+        {
+            "original": "https://www.google.com/",
+            "short": "j",
+            "title": "Google"
+        },
+        {
+            "original": "https://www.twitter.com/",
+            "short": "1",
+            "title": "Twitter. It's what's happening."
+        },
 ```
 
 #### Questions or comments?
