@@ -47,10 +47,11 @@ https://url-shortener--api.herokuapp.com/api/v1/top
 #### POST /api/v1/url
 
    * Allows creating a new url with parameters:
+```
         example parameters:
-        ```
+
             { "original": "https://www.google.com/" }
-        ```
+```
 ```    
         Return JSON:
         {
@@ -71,7 +72,7 @@ https://url-shortener--api.herokuapp.com/api/v1/top
 ```
   
   * Return JSON:
-  ```
+```
   [
     {
         "original": "https://www.mlb.com/",
