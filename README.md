@@ -38,13 +38,14 @@ $ rspec
 
 * To view production version, visit:
 
-https://tranquil-anchorage-97299.herokuapp.com/top
+https://url-shortener--api.herokuapp.com/top
 
 ### Record Endpoints:
 
 #### Urls
 ```
 POST /api/v1/url
+```
 ```
    * Allows creating a new url with parameters:<br/>
         example parameters:<br/>
@@ -56,6 +57,7 @@ POST /api/v1/url
           "short": "m",<br/>
           "title": null<br/>
          }
+```
 ```
 GET /api/v1/<short>
 ```
