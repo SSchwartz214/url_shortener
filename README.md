@@ -73,7 +73,6 @@ https://url-shortener--api.herokuapp.com/api/v1/top
 ```
 Return JSON:
 
-
       [
         {
             "original": "https://www.mlb.com/",
