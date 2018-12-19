@@ -62,7 +62,7 @@ https://url-shortener--api.herokuapp.com/api/v1/top
                }
   ```
 
-  #### GET /api/v1/<short>
+  #### GET /api/v1/SHORT_URL
 
    * Redirects to the original url
 
