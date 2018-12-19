@@ -59,10 +59,14 @@ https://url-shortener--api.herokuapp.com/api/v1/top
 ```
 
 #### GET /api/v1/<short>
+```
    Redirects to the original url
+```
 
 #### GET /api/v1/top
+```
    Returns the top 100 most frequented urls
+```
   
   Return JSON:
   ```
