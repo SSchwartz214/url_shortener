@@ -40,11 +40,11 @@ $ rspec
 
 https://url-shortener--api.herokuapp.com/api/v1/top
 
-### Record Endpoints:
+## Record Endpoints:
 
-#### Urls
+### Urls
 
-# POST /api/v1/url
+#### POST /api/v1/url
 ```
    * Allows creating a new url with parameters:
         example parameters:
@@ -58,11 +58,11 @@ https://url-shortener--api.herokuapp.com/api/v1/top
          }
 ```
 
-# GET /api/v1/<short>
-  ## Redirects to the original url
+#### GET /api/v1/<short>
+   Redirects to the original url
 
-# GET /api/v1/top
-  ## Returns the top 100 most frequented urls
+#### GET /api/v1/top
+   Returns the top 100 most frequented urls
   
   Return JSON:
   ```
