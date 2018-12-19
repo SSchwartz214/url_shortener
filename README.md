@@ -42,7 +42,7 @@ https://url-shortener--api.herokuapp.com/api/v1/top
 
 ## Record Endpoints:
 
-### Urls
+ **Urls**
 
 #### POST /api/v1/url
 
