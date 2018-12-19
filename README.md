@@ -46,7 +46,7 @@ https://url-shortener--api.herokuapp.com/api/v1/top
 
   #### POST /api/v1/url
 
-     * Allows creating a new url with parameters:
+   * Allows creating a new url with parameters:
   ```
           example parameters:
 
@@ -64,12 +64,12 @@ https://url-shortener--api.herokuapp.com/api/v1/top
 
   #### GET /api/v1/<short>
 
-     * Redirects to the original url
+   * Redirects to the original url
 
 
   #### GET /api/v1/top
 
-     * Returns the top 100 most frequented urls
+   * Returns the top 100 most frequented urls
   ```
         [
           {
