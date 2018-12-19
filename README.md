@@ -40,54 +40,54 @@ $ rspec
 
 https://url-shortener--api.herokuapp.com/api/v1/top
 
-## Record Endpoints:
+## API Endpoints:
 
- **Urls**
+ ### Urls
 
-#### POST /api/v1/url
+  #### POST /api/v1/url
 
-   * Allows creating a new url with parameters:
-```
-        example parameters:
+     * Allows creating a new url with parameters:
+  ```
+          example parameters:
 
-            { "original": "https://www.google.com/" }
-```
-```    
-        Return JSON:
-        
-            {
+              { "original": "https://www.google.com/" }
+  ```
+  ```    
+          Return JSON:
+
+              {
+                "original": "https://www.google.com/",
+                "short": "m",
+                "title": null
+               }
+  ```
+
+  #### GET /api/v1/<short>
+
+     * Redirects to the original url
+
+
+  #### GET /api/v1/top
+
+     * Returns the top 100 most frequented urls
+  ```
+        [
+          {
+              "original": "https://www.mlb.com/",
+              "short": "i",
+              "title": "MLB.com | The Official Site of Major League Baseball"
+          },
+          {
               "original": "https://www.google.com/",
-              "short": "m",
-              "title": null
-             }
-```
-
-#### GET /api/v1/<short>
-
-   * Redirects to the original url
-
-
-#### GET /api/v1/top
-
-   * Returns the top 100 most frequented urls
-```
-      [
-        {
-            "original": "https://www.mlb.com/",
-            "short": "i",
-            "title": "MLB.com | The Official Site of Major League Baseball"
-        },
-        {
-            "original": "https://www.google.com/",
-            "short": "j",
-            "title": "Google"
-        },
-        {
-            "original": "https://www.twitter.com/",
-            "short": "1",
-            "title": "Twitter. It's what's happening."
-        },
-```
+              "short": "j",
+              "title": "Google"
+          },
+          {
+              "original": "https://www.twitter.com/",
+              "short": "1",
+              "title": "Twitter. It's what's happening."
+          },
+  ```
 
 #### Questions or comments?
 
