@@ -44,43 +44,43 @@ https://url-shortener--api.herokuapp.com/api/v1/top
 
 #### Urls
 
-** POST /api/v1/url
+# POST /api/v1/url
 ```
-   * Allows creating a new url with parameters:<br/>
-        example parameters:<br/>
-            { "original": "https://www.google.com/" } <br/>
+   * Allows creating a new url with parameters:
+        example parameters:
+            { "original": "https://www.google.com/" }
             
-        Return JSON:<br/>
-        {<br/>
-          "original": "https://www.google.com/",<br/>
-          "short": "m",<br/>
-          "title": null<br/>
+        Return JSON:
+        {
+          "original": "https://www.google.com/",
+          "short": "m",
+          "title": null
          }
 ```
 
-** GET /api/v1/<short>
-  * Redirects to the original url
+# GET /api/v1/<short>
+  ## Redirects to the original url
 
-** GET /api/v1/top
-  * Returns the top 100 most frequented urls
+# GET /api/v1/top
+  ## Returns the top 100 most frequented urls
   
-  Return JSON:<br/>
+  Return JSON:
   ```
-  [<br/>
-    {<br/>
-        "original": "https://www.mlb.com/",<br/>
+  [
+    {
+        "original": "https://www.mlb.com/",
         "short": "i",<br/>
-        "title": "MLB.com | The Official Site of Major League Baseball"<br/>
-    },<br/>
-    {<br/>
-        "original": "https://www.google.com/",<br/>
-        "short": "j",<br/>
-        "title": "Google"<br/>
-    },<br/>
-    {<br/>
-        "original": "https://www.twitter.com/",<br/>
-        "short": "1",<br/>
-        "title": "Twitter. It's what's happening."<br/>
+        "title": "MLB.com | The Official Site of Major League Baseball"
+    },
+    {
+        "original": "https://www.google.com/",
+        "short": "j",
+        "title": "Google"
+    },
+    {
+        "original": "https://www.twitter.com/",
+        "short": "1",
+        "title": "Twitter. It's what's happening."
     },
 ```
 
