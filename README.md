@@ -70,10 +70,9 @@ https://url-shortener--api.herokuapp.com/api/v1/top
 ```
    Returns the top 100 most frequented urls
 ```
-  
-  * Return JSON:
-  
 ```
+Return JSON:
+
   [
     {
         "original": "https://www.mlb.com/",
