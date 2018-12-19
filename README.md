@@ -45,11 +45,13 @@ https://url-shortener--api.herokuapp.com/api/v1/top
 ### Urls
 
 #### POST /api/v1/url
-```
+
    * Allows creating a new url with parameters:
         example parameters:
+        ```
             { "original": "https://www.google.com/" }
-            
+        ```
+```    
         Return JSON:
         {
           "original": "https://www.google.com/",
