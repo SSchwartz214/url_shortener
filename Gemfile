@@ -12,6 +12,7 @@ gem 'httparty'
 gem 'nokogiri'
 gem 'sidekiq'
 gem 'active_model_serializers'
+gem "validate_url"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -18,12 +18,34 @@ describe 'Url API' do
     expect(url.short).to be_a(String)
   end
 
+  it 'returns an error if url is invalid' do
+    url_params = { original: 'www.espn'}
+
+    post '/api/v1/url', params: {url: url_params}
+
+    error = JSON.parse(response.body)
+
+    expect(response.status).to eq(200)
+    expect(error['original'][0]).to eq('is not a valid URL')
+  end
+
   it 'can get an original url by its short url' do
     short = Url.last.short
 
     get "/api/v1/#{short}"
 
     expect(response.headers["Content-Type"]).to eq "text/html; charset=utf-8"
+  end
+
+  it 'returns an error if short url is invalid' do
+    short = "not_valid"
+
+    get "/api/v1/#{short}"
+
+    error = JSON.parse(response.body)
+
+    expect(status).to eq(400)
+    expect(error['error']).to eq("Short url does not exist")
   end
 
   it 'can send a list of the top 100 urls' do

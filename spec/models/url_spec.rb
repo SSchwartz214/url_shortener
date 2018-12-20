@@ -2,7 +2,16 @@ require 'rails_helper'
 
 RSpec.describe Url, type: :model do
   context "Validations" do
-    it {should validate_presence_of :original}
+    it "should return an error if url is invalid" do
+      assert_raises(ActiveRecord::RecordInvalid) do
+        Url.create!(original: "htp:/domain")
+      end
+    end
+    it "should return an error if url is nil" do
+      assert_raises(ActiveRecord::RecordInvalid) do
+        Url.create!(original: nil)
+      end
+    end
   end
 
   context "Attributes" do
