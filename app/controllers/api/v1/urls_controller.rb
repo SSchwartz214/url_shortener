@@ -6,18 +6,6 @@ class Api::V1::UrlsController < ApplicationController
     render json: top_100_urls
   end
 
-  def show
-    url = Url.find_by(short: params[:short])
-
-    if url
-      url.increment!(:clicks)
-      
-      redirect_to url.original
-    else
-      render json: {error: "Short url does not exist"}, status: 400
-    end
-  end
-
   def create
     url = Url.new(url_params)
     
