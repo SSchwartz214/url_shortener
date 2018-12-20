@@ -14,7 +14,7 @@ class Api::V1::UrlsController < ApplicationController
       
       redirect_to url.original
     else
-      render json: {error: "Can't locate url"}, status: 400
+      render json: {error: "Short url does not exist"}, status: 400
     end
   end
 
@@ -24,7 +24,7 @@ class Api::V1::UrlsController < ApplicationController
     if url.save
       render json: url
     else
-      render json: {error: 'Unable to create url'}, status: 404 
+      render json: url.errors
     end
   end
 
