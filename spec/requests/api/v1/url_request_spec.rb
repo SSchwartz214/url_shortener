@@ -32,7 +32,7 @@ describe 'Url API' do
   it 'can get an original url by its short url' do
     short = Url.last.short
 
-    get "/api/v1/#{short}"
+    get "/#{short}"
 
     expect(response.headers["Content-Type"]).to eq "text/html; charset=utf-8"
   end
@@ -40,7 +40,7 @@ describe 'Url API' do
   it 'returns an error if short url is invalid' do
     short = "not_valid"
 
-    get "/api/v1/#{short}"
+    get "/#{short}"
 
     error = JSON.parse(response.body)
 
