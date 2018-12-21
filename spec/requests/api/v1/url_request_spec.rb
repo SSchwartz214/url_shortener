@@ -23,10 +23,10 @@ describe 'Url API' do
 
     post '/api/v1/url', params: {url: url_params}
 
-    error = JSON.parse(response.body)
+    error = JSON.parse(response.body)['error']['original'][0]
 
-    expect(response.status).to eq(200)
-    expect(error['original'][0]).to eq('is not a valid URL')
+    expect(response.status).to eq(404)
+    expect(error).to eq('is not a valid URL')
   end
 
   it 'can get an original url by its short url' do

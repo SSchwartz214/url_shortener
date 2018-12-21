@@ -12,7 +12,7 @@ class Api::V1::UrlsController < ApplicationController
     if url.save
       render json: url
     else
-      render json: url.errors
+      render json: {error: url.errors}, status: 404
     end
   end
 
