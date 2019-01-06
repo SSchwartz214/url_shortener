@@ -16,6 +16,18 @@ class Api::V1::UrlsController < ApplicationController
     end
   end
 
+  def destroy
+    url = Url.find(params[:id])
+
+    if url.destroy
+      render json: {
+        message: "Successfully removed #{url.original}"
+      }
+    else
+      render json: {error: url.errors}, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def url_params

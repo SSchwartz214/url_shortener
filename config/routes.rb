@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
       post 'url', to: 'urls#create' 
       get 'top', to: 'urls#index'
+      resources :urls, only: [:destroy]
     end
   end
 end
